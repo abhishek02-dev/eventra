@@ -33,6 +33,7 @@ const Dashboard = () => {
       await axios.post(`http://localhost:8080/api/registrations`, {
         userEmail: user.email,
         eventId,
+        userId,
       });
       toast.success("Successfully registered!");
     } catch (err) {
@@ -55,7 +56,7 @@ const Dashboard = () => {
     <div className="min-h-screen bg-yellow-100 p-6">
           <div className="bg-[url('/images/timessquare-img.jpg')] bg-no-repeat  bg-cover bg-center inset-0 bg-white/40 h-128 w-full text-center flex items-center justify-center">
             <div className="relative z-10 p-6">
-              <h1 className="text-8xl font-bold text-green-950 mb-6">
+              <h1 className="text-7xl font-bold text-green-950 mb-6">
               Welcome to Eventra
             </h1>
             <p className="text-5xl text-yellow-300 mb-6 font-bold">
