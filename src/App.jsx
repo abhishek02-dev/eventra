@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar /> {/* ✅ Now it's inside BrowserRouter */}
+        <Navbar />
+        < Dashboard/>
         <Toaster position="top-center" />
 
         <Routes>
