@@ -13,7 +13,7 @@ const AdminPanel = () => {
 
   const fetchPendingEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/events/pending");
+      const res = await axios.get("https://eventra-backend-hv3i.onrender.com/api/events/pending");
       setEvents(res.data);
     } catch {
       toast.error("Failed to fetch events");
@@ -22,7 +22,7 @@ const AdminPanel = () => {
 
   const handleApproval = async (id, approved) => {
     try {
-      await axios.put(`http://localhost:8080/api/events/${id}/status`, null, {
+      await axios.put(`https://eventra-backend-hv3i.onrender.com/api/events/${id}/status`, null, {
         params: { approved },
       });
       toast.success(`Event ${approved ? "approved" : "rejected"}`);

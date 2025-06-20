@@ -19,7 +19,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/auth/register", formData);
+      const res = await axios.post("https://eventra-backend-hv3i.onrender.com/api/auth/register", formData);
       toast.success("Registered successfully!");
       navigate("/");
     } catch (err) {

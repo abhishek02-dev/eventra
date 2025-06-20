@@ -30,7 +30,7 @@ const Dashboard = () => {
     if (!user) return toast.error("Please log in first");
 
     try {
-      await axios.post(`http://localhost:8080/api/registrations`, {
+      await axios.post(`https://eventra-backend-hv3i.onrender.com/api/registrations`, {
         userEmail: user.email,
         eventId,
         userId,
@@ -43,7 +43,7 @@ const Dashboard = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/events");
+      const res = await axios.get("https://eventra-backend-hv3i.onrender.com/api/events");
       setEvents(res.data);
     } catch (err) {
       toast.error("Failed to load events");

@@ -16,18 +16,18 @@ const MyRegistrations = () => {
   const fetchRegisteredEvents = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/registrations/user/${user.userId}`
+        `https://eventra-backend-hv3i.onrender.com/api/registrations/user/${user.userId}`
       );
       setEvents(res.data);
     } catch (err) {
       toast.error("Failed to fetch your registrations");
     }
   };
-
+ 
   const handleCancel = async (eventId) => {
     try {
       await axios.delete(
-        `http://localhost:8080/api/registrations/cancel?email=${user.email}&eventId=${eventId}`
+        `https://eventra-backend-hv3i.onrender.com/api/registrations/cancel?email=${user.email}&eventId=${eventId}`
       );
       toast.success("Registration cancelled");
       fetchRegisteredEvents(); // refresh

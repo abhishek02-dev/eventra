@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("http://localhost:8080/api/auth/login", {
+    const res = await axios.post("https://eventra-backend-hv3i.onrender.com/api/auth/login", {
       email: formData.email,
       password: formData.password,
       username:formData.username,

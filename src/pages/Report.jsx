@@ -13,7 +13,7 @@ const Report = () => {
 
   const fetchAllEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/events");
+      const res = await axios.get("https://eventra-backend-hv3i.onrender.com/api/events");
       setEvents(res.data);
     } catch (err) {
       toast.error("Failed to fetch events");

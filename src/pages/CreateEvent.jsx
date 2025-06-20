@@ -26,7 +26,7 @@ const CreateEvent = () => {
     }
 
     try {
-      await axios.post("http://localhost:8080/api/events", {
+      await axios.post("https://eventra-backend-hv3i.onrender.com/api/events", {
         ...eventData,
         createdBy: user.email,
       });

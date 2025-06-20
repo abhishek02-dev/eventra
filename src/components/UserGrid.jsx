@@ -11,7 +11,7 @@ export default function UserGrid() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/auth/users");
+      const res = await axios.get("https://eventra-backend-hv3i.onrender.com/auth/users");
       setUsers(res.data);
     } catch (err) {
       toast.error("Failed to fetch users");
@@ -25,7 +25,7 @@ export default function UserGrid() {
 const handleView = async (user) => {
   try {
     const res = await axios.get(
-      `http://localhost:8080/api/registrations/user/${user.id}`
+      `https://eventra-backend-hv3i.onrender.com/registrations/user/${user.id}`
     );
     setSelectedUser(user);
     setRegistrations(res.data);
@@ -38,7 +38,7 @@ const handleView = async (user) => {
 
  const handleDelete = async (id) => {
   try {
-    await axios.delete(`http://localhost:8080/api/auth/users/${id}`);
+    await axios.delete(`https://eventra-backend-hv3i.onrender.com/auth/users/${id}`);
     toast.success("User deleted successfully");
     setUsers(users.filter((u) => u.id !== id));
   } catch (err) {
