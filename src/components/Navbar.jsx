@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.removeItem("user");
-    navigate("/login");
+    navigate("/");
   };
 
   const toggleMenu = () => {
@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {!user && (
             <>
-              <Link to="/login" className="hover:underline text-gray-700">
+              <Link to="/" className="hover:underline text-gray-700">
                 Login
               </Link>
               <Link to="/register" className="hover:underline text-gray-700">
@@ -128,7 +128,7 @@ const Navbar = () => {
 
           {!user && (
             <>
-              <Link to="/login" className="hover:underline text-gray-700" onClick={toggleMenu}>
+              <Link to="/" className="hover:underline text-gray-700" onClick={toggleMenu}>
                 Login
               </Link>
               <Link to="/register" className="hover:underline text-gray-700" onClick={toggleMenu}>
