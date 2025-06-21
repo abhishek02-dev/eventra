@@ -102,7 +102,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="mt-4 flex flex-col gap-4 md:hidden text-sm">
-          <Link to="/events" className="hover:underline text-gray-700" onClick={toggleMenu}>
+          <Link to="/dashboard" className="hover:underline text-gray-700" onClick={toggleMenu}>
             Events
           </Link>
 
